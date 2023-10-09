@@ -13,7 +13,7 @@ int main(){
     double I = cos(45);
     double J = tan(45);
     
-    printf("\n%lf", A);
+    printf("\n%lf", B);
 
     return 0;
 
