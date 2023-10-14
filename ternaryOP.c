@@ -18,7 +18,7 @@ int findMax(int x, int y){
 
 int main(){
 
-    int max = findMax(50, 10);
+    int max = findMax(50, 10); 
     printf("%d", max);
 
     return 0;
