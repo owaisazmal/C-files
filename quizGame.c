@@ -15,8 +15,8 @@ int main(){
 
     int numberOfQuestions = sizeof(ques)/sizeof(ques[0]);
 
-    char guess;
-    int score;
+    char guess =' ';
+    int score = 0;
 
     printf("QUIZ GAME\n");
 
