@@ -13,6 +13,18 @@ double question1(int x) {
     return result;
 }
 
+double question2(int n){                                            //practice
+    int i;
+    double result = 0;
+
+#pragma omp parellel for private(i) reduce(+:result)
+    for(i = 1; i < n; i += 1){
+        result += (1.0*n)/(i) + (i*1.0)/n;
+    }
+
+return result;
+}                                                                       
+
 int main() {
     int n = 1; 
     double result = question1(n);

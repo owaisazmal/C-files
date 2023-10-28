@@ -11,5 +11,17 @@ int main() {
 
     printf("AND = %d", z); // 00000100
 
+    z = x | y;
+   printf("OR = %d\n", z);
+
+   z = x ^ y;
+   printf("XOR = %d\n", z);
+
+   z = x << 2;
+   printf("SHIFT LEFT = %d\n", z);
+
+   z = x >> 2;
+   printf("SHIFT RIGHT = %d\n", z);
+
     return 0;
 }
