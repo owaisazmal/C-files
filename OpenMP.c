@@ -33,6 +33,29 @@ double question3 (int n){
         result += (2.0*i)/n;
     }
 }
+#include <stdlib.h>
+#include <omp.h>
+
+int* randomArray(int n) {
+    int* array = (int*)malloc(n * sizeof(int));
+
+    #pragma omp parallel
+    {
+        #pragma omp master
+        {
+            for (int i = 0; i < n; i += 1) {
+                #pragma omp task firstprivate(i)
+                {
+                    array[i] = rand();
+                }
+            }
+        }
+    } // End of parallel region
+
+    #pragma omp taskwait
+    return array;
+}
+
 
 int main() {
     int n = 1; 
