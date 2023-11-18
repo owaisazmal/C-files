@@ -23,7 +23,16 @@ double question2(int n){                                            //practice
     }
 
 return result;
-}                                                                       
+}
+
+double question3 (int n){
+    int i;
+    double result = 0;
+    #pragma omp parellel for private(i) reduce(+:result)
+    for(i = 1; i <= n; i+=1){
+        result += (2.0*i)/n;
+    }
+}
 
 int main() {
     int n = 1; 
